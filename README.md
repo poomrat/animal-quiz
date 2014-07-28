@@ -76,6 +76,7 @@ I knew it! Play again?
   * scenarios: [/features](https://github.com/jan-molak/animal-quiz/tree/master/features)
   * acceptance testing framework: [/features/lib](https://github.com/jan-molak/animal-quiz/tree/master/features/lib)
   * steps: [/features/steps](https://github.com/jan-molak/animal-quiz/tree/master/features/steps)
+  * runner: [/test/features.js](https://github.com/jan-molak/animal-quiz/tree/master/test/features.js)
 * Unit tests: [/test/spec](https://github.com/jan-molak/animal-quiz/tree/master/test/spec)
 * Application: [/src](https://github.com/jan-molak/animal-quiz/tree/master/src)
 

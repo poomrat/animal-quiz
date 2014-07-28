@@ -1,6 +1,5 @@
 'use strict';
 var spawn        = require('child_process').spawn,
-    readline     = require('readline'),
     _            = require('lodash'),
     EventEmitter = require('events').EventEmitter,
     inherits     = require('util').inherits,
@@ -46,7 +45,7 @@ function QuizDriver(path) {
         });
 
         self.once('question', function(question) {
-            deferred.resolve(question);
+            deferred.resolve();
         });
 
         animal_quiz_process = spawn(path);
@@ -73,10 +72,7 @@ function QuizDriver(path) {
     };
 
     this.quit = function() {
-//        if (animal_quiz_process) {
-//            animal_quiz_process.kill('SIGINT');
-//        }
-//        i.close();
+        // cleanup if needed
     };
 }
 
