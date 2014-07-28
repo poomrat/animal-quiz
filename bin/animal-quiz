@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var sys = require('util');
+
+process.on('uncaughtException', function (e) {
+    sys.puts(e.stack);
+});
+
+process.on('exit', function () {
+    sys.print('\n');
+});
+
+require(__dirname + '/../src/cli')();
