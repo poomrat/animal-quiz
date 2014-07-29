@@ -91,6 +91,6 @@ I knew it! Play again?
 * A primer on user stories by Antony Marcano - [It starts with a story](http://antonymarcano.com/blog/2014/05/it-starts-with-a-story/)
 * Test doubles in JavaScript by Jan Molak - [Mocking JavaScript a little - test doubles with sinon.js, mocha and chai](http://smartcodeltd.co.uk/blog/2014/07/22/mocking-javascript-a-little-test-doubles-with-sinonjs-mocha-and-chai/)
 * Original [Ruby Quiz](http://rubyquiz.com/quiz15.html)
-* Potentiallly helpful data structure: [Binary Tree](http://en.wikipedia.org/wiki/Binary_tree)
+* Potentially helpful data structure: [Binary Tree](http://en.wikipedia.org/wiki/Binary_tree)
 * Node CLI by Fil Maj and Michael Brooks: [Master the CLI with Node](http://michaelbrooks.ca/deck/jsconf2013/#/)
 * Setting up node in [IntelliJ/WebStorm](http://www.jetbrains.com/idea/webhelp/node-js-and-npm.html)
