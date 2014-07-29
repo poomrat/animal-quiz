@@ -28,11 +28,6 @@ module.exports = (grunt) ->
       options:
         jshintrc:       true
 
-    cucumberjs:
-      src: '<%= src.features.path %>',
-      options:
-        steps: '<%= src.features.steps %>'
-
     mochacov:
       options:
         harmony: true
