@@ -9,6 +9,7 @@ var spawn        = require('child_process').spawn,
 function QuizDriver(path) {
     var animal_quiz_process,
         questions = _([]),
+        isWin = process.platform === 'win32',
         self = this;
 
     EventEmitter.call(this);
@@ -48,7 +49,9 @@ function QuizDriver(path) {
             deferred.resolve();
         });
 
-        animal_quiz_process = spawn(path);
+        animal_quiz_process = ! isWin ?
+            spawn(path) :
+            spawn('cmd', ['/s', '/c', 'node', path]);
 
         animal_quiz_process.stdout
             .pipe(split('?'))
