@@ -15,6 +15,7 @@ module.exports = (function() {
     function startQuiz() { return quiz.start(); }
     function confirm()   { return quiz.confirm(); }
     function decline()   { return quiz.decline(); }
+    function answer()   { return quiz.answer(); }
 
 
     return English.library(dictionary)
@@ -69,13 +70,12 @@ module.exports = (function() {
         })
 
         .then('I\'m asked what animal I was thinking of', function(next) {
-            //TODO: I should have assertion here somehow
+            expect(quiz.lastQuestion()).to.contain('What animal were you thinking of?');
             next();
         })
 
         .when('I answer that it was a "rabbit"', function(next){
-            //TODO: I have to answer if this is correct
-            next();
+            answer('rabbit').done(next);
         })
 
         .then('I\'m asked to provide a question to help the game distinguish between a "rabbit" and a "kitten"', function(next) {

@@ -77,6 +77,8 @@ function QuizDriver(path) {
     this.quit = function() {
         // cleanup if needed
     };
+
+    this.answer = write;
 }
 
 inherits(QuizDriver, EventEmitter);
