@@ -66,5 +66,30 @@ module.exports = (function() {
             expect(quiz.lastQuestion()).to.contain('I knew it!');
 
             next();
+        })
+
+        .then('I\'m asked what animal I was thinking of', function(next) {
+            //TODO: I should have assertion here somehow
+            next();
+        })
+
+        .when('I answer that it was a "rabbit"', function(next){
+            //TODO: I have to answer if this is correct
+            next();
+        })
+
+        .then('I\'m asked to provide a question to help the game distinguish between a "rabbit" and a "kitten"', function(next) {
+            //TODO: complete this
+            next();
+        })
+
+        .then('I say that the question should be "Is it a small animal"', function(next) {
+            //TODO: complete this
+            next();
+        })
+
+        .then('it should be answered "yes"', function(next) {
+            //TODO: complete this
+            next();
         });
 })();
