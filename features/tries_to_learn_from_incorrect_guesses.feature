@@ -9,7 +9,6 @@ Feature: Tries to learn from incorrect guesses
   # [ ] Implement the missing functionality
   # [ ] Refactor the scenario to make the steps more focused
 
-  @Pending
   Scenario:
 
     # ...
