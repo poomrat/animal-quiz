@@ -1,4 +1,3 @@
-
 Feature: Tries to learn from incorrect guesses
   As an Animal Quiz Player
   I'd like the game to learn from its incorrect guesses
