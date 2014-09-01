@@ -7,6 +7,8 @@ written by [James Nolan "Jim" Weirich](http://en.wikipedia.org/wiki/Jim_Weirich)
 
 This repository is primarily intended for the participants of [my](http://smartcodeltd.co.uk/) Test-Driven Tuesday workshop at [Thomson Reuters](http://thomsonreuters.com/).
 
+[![Build Status](https://travis-ci.org/jan-molak/animal-quiz.svg?branch=master)](https://travis-ci.org/jan-molak/animal-quiz)
+
 ## The goal
 
 The game should work like this. The program starts by telling the user to think of an animal.
