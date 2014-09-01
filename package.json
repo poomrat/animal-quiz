@@ -4,7 +4,7 @@
   "description": "An exercise on BDD for the participants of my Test-Driven Tuesday workshops",
   "main": "index.js",
   "scripts": {
-    "test": "/node_modules/.bin/grunt test"
+    "test": "./node_modules/.bin/grunt test"
   },
   "repository": {
     "type": "git",
