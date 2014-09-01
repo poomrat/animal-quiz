@@ -6,7 +6,7 @@ var Yadda        = require('yadda'),
     QuizDriver   = require('../features/lib/quiz_driver'),
     bin_path     = path.resolve(__dirname + '/../../bin/animal-quiz');
 
-Yadda.plugins.mocha.AsyncStepLevelPlugin.init();
+Yadda.plugins.mocha.StepLevelPlugin.init();
 
 new Yadda.FeatureFileSearch('features').each(function(file) {
 
