@@ -53,6 +53,9 @@ function QuizDriver(path) {
             spawn(path) :
             spawn('cmd', ['/s', '/c', 'node', path]);
 
+
+        animal_quiz_process.stdout.setEncoding('utf8');
+
         animal_quiz_process.stdout
             .pipe(split('?'))
             .on('data', function(question) {
@@ -61,6 +64,8 @@ function QuizDriver(path) {
 
         return deferred.promise;
     };
+
+    this.answer = write;
 
     this.confirm = function() {
         return write('yes');

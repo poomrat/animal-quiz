@@ -1,11 +1,12 @@
 module.exports = (grunt) ->
 
+  grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
-  grunt.loadNpmTasks 'grunt-mocha-cov'
+  grunt.loadNpmTasks 'grunt-mocha-istanbul'
 
   grunt.registerTask 'test',             [ 'jshint',   'test:spec', 'test:behaviour' ]
-  grunt.registerTask 'test:spec',        [ 'mochacov:spec' ]
-  grunt.registerTask 'test:behaviour',   [ 'mochacov:behaviour' ]
+  grunt.registerTask 'test:spec',        [ 'mocha_istanbul:spec' ]
+  grunt.registerTask 'test:behaviour',   [ 'mocha_istanbul:behaviour' ]
 
   grunt.registerTask 'default',          [ 'jshint' ]
 
@@ -23,20 +24,28 @@ module.exports = (grunt) ->
         '<%= src.features.js %>'
       ]
 
+    clean: [ 'target' ]
+
     jshint:
       src:      [ '<%= src.js %>' ]
       options:
         jshintrc:       true
 
-    mochacov:
+    mocha_istanbul:
       options:
-        harmony: true
+        root:     '.'
+        reportFormats: [ 'text-summary', 'html' ]
+
       spec:
+        src: 'test/spec'
         options:
-          files: [ '<%= src.spec %>' ]
-          reporter: 'spec'
+          recursive:      true
+          mask:           '**/*.spec.js'
+          coverageFolder: 'target/spec-coverage'
 
       behaviour:
+        src: 'test'
         options:
-          files: [ '<%= src.features.js %>' ]
-          reporter: 'spec'
+          recursive:      false
+          mask:           'features.js'
+          coverageFolder: 'target/behaviour-coverage'

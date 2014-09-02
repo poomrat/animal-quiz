@@ -15,7 +15,7 @@ module.exports = (function() {
     function startQuiz() { return quiz.start(); }
     function confirm()   { return quiz.confirm(); }
     function decline()   { return quiz.decline(); }
-    function answer()   { return quiz.answer(); }
+    function answer()    { return quiz.answer(); }
 
 
     return English.library(dictionary)
@@ -75,7 +75,9 @@ module.exports = (function() {
         })
 
         .when('I answer that it was a "rabbit"', function(next){
-            answer('rabbit').done(next);
+            answer('rabbit').
+
+                done(next);
         })
 
         .then('I\'m asked to provide a question to help the game distinguish between a "rabbit" and a "kitten"', function(next) {

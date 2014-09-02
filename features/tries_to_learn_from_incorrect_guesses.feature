@@ -1,4 +1,3 @@
-
 Feature: Tries to learn from incorrect guesses
   As an Animal Quiz Player
   I'd like the game to learn from its incorrect guesses
@@ -9,7 +8,7 @@ Feature: Tries to learn from incorrect guesses
   # [ ] Implement the missing functionality
   # [ ] Refactor the scenario to make the steps more focused
 
-  Scenario:
+  Scenario: Learning for the first time
 
     # ...
     Given I play the game for the first time
